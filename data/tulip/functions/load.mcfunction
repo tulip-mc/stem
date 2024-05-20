@@ -22,15 +22,16 @@ scoreboard players set 12 tulip.defs 12
 scoreboard players set 20 tulip.defs 20
 
 # world
-gamerule announceAdvancements false
-gamerule commandBlockOutput false
+execute unless score enforce_gamerules tulip.config matches 0 run gamerule announceAdvancements false
+execute unless score enforce_gamerules tulip.config matches 0 run gamerule commandBlockOutput false
 #gamerule doLimitedCrafting true
-gamerule keepInventory true
-gamerule mobGriefing false
-gamerule sendCommandFeedback false
+execute unless score enforce_gamerules tulip.config matches 0 run gamerule keepInventory true
+execute unless score enforce_gamerules tulip.config matches 0 run gamerule mobGriefing false
+execute unless score enforce_gamerules tulip.config matches 0 run gamerule sendCommandFeedback false
 #gamerule showCoordinates false (1.20)
 #gamerule showTags false (1.20)
 
 # bossbars
-bossbar add tulip:ver ""
-bossbar set tulip:ver max 12
+execute unless score enforce_bossbar tulip.config matches 0 run bossbar add tulip:ver ""
+execute unless score enforce_bossbar tulip.config matches 0 run bossbar set tulip:ver max 12
+execute if score enforce_bossbar tulip.config matches 0 run bossbar remove tulip:ver
