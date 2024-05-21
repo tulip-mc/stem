@@ -28,3 +28,7 @@ effect give @e[type=villager] fire_resistance 2 255 true
 effect give @e[type=villager] water_breathing 2 255 true
 # face players
 execute as @e[type=villager] at @s facing entity @p[distance=..6] feet if entity @a[distance=..6] run tp ~ ~ ~
+
+
+# uuid
+execute as @a[tag=!player.uuid_tracked] run function tulip:system/uuid/go

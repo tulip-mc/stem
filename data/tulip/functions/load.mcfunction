@@ -35,3 +35,9 @@ execute unless score enforce_gamerules tulip.config matches 0 run gamerule sendC
 execute unless score enforce_bossbar tulip.config matches 0 run bossbar add tulip:ver ""
 execute unless score enforce_bossbar tulip.config matches 0 run bossbar set tulip:ver max 12
 execute if score enforce_bossbar tulip.config matches 0 run bossbar remove tulip:ver
+
+# uuid
+scoreboard objectives add temp_store.uuid.0 dummy
+scoreboard objectives add temp_store.uuid.1 dummy
+scoreboard objectives add temp_store.uuid.2 dummy
+scoreboard objectives add temp_store.uuid.3 dummy
