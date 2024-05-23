@@ -41,3 +41,8 @@ scoreboard objectives add temp_store.uuid.0 dummy
 scoreboard objectives add temp_store.uuid.1 dummy
 scoreboard objectives add temp_store.uuid.2 dummy
 scoreboard objectives add temp_store.uuid.3 dummy
+
+# stats
+scoreboard objectives add player.health health
+scoreboard objectives add player.defense armor
+scoreboard objectives add player.food food
