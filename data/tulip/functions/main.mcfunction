@@ -5,20 +5,14 @@
 ## ver.year = 2024
 ## ver.month = 05
 ## ver.day = 20
-bossbar set tulip:ver name ["",{"text":"tulip","bold":true},{"text":" Closed Beta ","color":"gray"},{"text":" \u0020 [","color":"dark_gray"},{"score":{"name":"ver.year","objective":"tulip.defs"}},{"text":"."},{"score":{"name":"ver.month","objective":"tulip.defs"}},{"score":{"name":"ver.day","objective":"tulip.defs"}},{"text":"]","color":"dark_gray"}]
+execute unless score ver.month tulip.defs matches 6 run bossbar set tulip:ver name ["",{"text":"③ ","color":"#a6e3a1"},{"text":"tulip","bold":true,"color":"#a6e3a1"},{"text":" closed beta ","color":"gray"},{"text":" \u0020 [","color":"dark_gray"},{"score":{"name":"ver.year","objective":"tulip.defs"}},{"text":"."},{"score":{"name":"ver.month","objective":"tulip.defs"}},{"score":{"name":"ver.day","objective":"tulip.defs"}},{"text":"]","color":"dark_gray"}]
+execute if score ver.month tulip.defs matches 6 run bossbar set tulip:ver name ["",{"text":"③ ","color":"#a6e3a1"},{"text":"t","bold":true,"color":"#f38ba8"},{"text":"u","bold":true,"color":"#fab387"},{"text":"l","bold":true,"color":"#a6e3a1"},{"text":"i","bold":true,"color":"#74c7ec"},{"text":"p","bold":true,"color":"#cba6f7"},{"text":" closed beta ","color":"gray"},{"text":" \u0020 [","color":"dark_gray"},{"score":{"name":"ver.year","objective":"tulip.defs"}},{"text":"."},{"score":{"name":"ver.month","objective":"tulip.defs"}},{"score":{"name":"ver.day","objective":"tulip.defs"}},{"text":"]","color":"dark_gray"}]
 # display @a
 bossbar set tulip:ver players @a[tag=!ignore_ver]
 # set fill
-execute store result bossbar tulip:ver value run scoreboard players get ver.month tulip.defs
+bossbar set tulip:ver value 0
 # colour
-## Q1
-execute if score ver.month tulip.defs matches 1..3 run bossbar set tulip:ver color yellow
-## Q2
-execute if score ver.month tulip.defs matches 4..6 run bossbar set tulip:ver color green
-## Q3
-execute if score ver.month tulip.defs matches 7..9 run bossbar set tulip:ver color red
-## Q4
-execute if score ver.month tulip.defs matches 10..12 run bossbar set tulip:ver color white
+bossbar set tulip:ver color white
 
 
 # effect villagers
