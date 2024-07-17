@@ -15,6 +15,10 @@ bossbar set tulip:ver value 0
 bossbar set tulip:ver color white
 
 
+# heart beat
+function tulip:system/heart/main
+
+
 # effect villagers
 effect give @e[type=villager] resistance 2 255 true
 effect give @e[type=villager] regeneration 2 255 true

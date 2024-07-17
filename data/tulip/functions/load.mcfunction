@@ -46,3 +46,8 @@ scoreboard objectives add temp_store.uuid.3 dummy
 scoreboard objectives add player.health health
 scoreboard objectives add player.defense armor
 scoreboard objectives add player.food food
+
+# heart beat
+scoreboard objectives add temp_store.heart_beat dummy
+forceload add 0 0 0 0
+execute positioned 0 0 0 unless entity @e[type=minecraft:area_effect_cloud,tag=tulip.heart,distance=..5] run summon minecraft:area_effect_cloud 0 0 0 {Particle:{type:"block",block_state:"minecraft:air"},Radius:0f,Age:2147483647,Tags:["tulip.heart"]}
